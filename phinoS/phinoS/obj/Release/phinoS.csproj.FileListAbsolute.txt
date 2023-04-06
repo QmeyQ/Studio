@@ -1,0 +1,12 @@
+E:\project\studio\Studio\phinoS\phinoS\bin\Release\key.vbs
+E:\project\studio\Studio\phinoS\phinoS\bin\Release\run.bat
+E:\project\studio\Studio\phinoS\phinoS\bin\Release\phinoS.exe.config
+E:\project\studio\Studio\phinoS\phinoS\bin\Release\phinoS.exe
+E:\project\studio\Studio\phinoS\phinoS\bin\Release\phinoS.pdb
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.csprojAssemblyReference.cache
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.Form1.resources
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.Properties.Resource1.resources
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.csproj.GenerateResource.cache
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.csproj.CoreCompileInputs.cache
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.exe
+E:\project\studio\Studio\phinoS\phinoS\obj\Release\phinoS.pdb
