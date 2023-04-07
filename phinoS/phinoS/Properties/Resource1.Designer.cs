@@ -59,5 +59,28 @@ namespace phinoS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 Set WShell = WScript.CreateObject(&quot;WScript.Shell&quot;)
+        ///Wshell.run &quot;cmd.exe /C &quot; &amp; chr(34) &amp; chr(34) &amp; Replace(Wscript.ScriptFullName, &quot;key.vbs&quot;, &quot;&quot;) &amp; &quot;\run.bat&quot; &amp; chr(34) &amp; chr(34) ,0,false
+        ///WShell.Sendkeys &quot;{down}&quot;
+        ///
+        /// 的本地化字符串。
+        /// </summary>
+        internal static string key {
+            get {
+                return ResourceManager.GetString("key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 tasklist /nh|find /i &quot;Rhino.exe&quot; 
+        ///if ERRORLEVEL 1 taskkill /im PhinoS.exe /f /t 的本地化字符串。
+        /// </summary>
+        internal static string run {
+            get {
+                return ResourceManager.GetString("run", resourceCulture);
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Reflection;
 using Microsoft.Win32; //写入注册表时要用到
 using System.Diagnostics;
+using System.IO;
 
 namespace phinoS
 {
@@ -39,6 +40,30 @@ namespace phinoS
             KeyboardHookLib _keyboardHook = new KeyboardHookLib();
             _keyboardHook.InstallHook(this.OnKeyPress); 
 
+
+            if (!File.Exists("key.vbs"))
+            {
+                try
+                {
+                    File.WriteAllText("key.vbs", phinoS.Properties.Resource1.key);
+                }catch(Exception e)
+                {
+                    textBox2.Text = e.Message;
+                    return;
+                }
+            }
+            if (!File.Exists("run.bat"))
+            {
+                try
+                {
+                    File.WriteAllText("run.bat", phinoS.Properties.Resource1.run);
+                }
+                catch (Exception e)
+                {
+                    textBox2.Text = e.Message;
+                    return;
+                }
+            }
 
         }
         String show;

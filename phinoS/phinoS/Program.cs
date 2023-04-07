@@ -1,10 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.AccessControl;
 
 namespace phinoS
 {
@@ -18,16 +20,25 @@ namespace phinoS
         {
             Process[] processes;
             processes = Process.GetProcessesByName(Application.ProductName);
-            string str = "";
             foreach (Process p in processes)
             {
                 if (p.Id != Process.GetCurrentProcess().Id)
                 {
-                    p.Kill();
+                    try
+                    {
+                        p.Kill();
+                    }catch(Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    if(!p.HasExited)
+                    {
+                        Process.Start("cmd.exe"," /c taskkill /im \"PhinoS.exe\" & exit");
+                    }
                 }
-                else
-                    Console.WriteLine(Application.ProductName);
             }
+
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
